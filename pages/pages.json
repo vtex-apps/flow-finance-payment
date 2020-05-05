@@ -1,0 +1,15 @@
+{
+  "pages": {
+    "ff-test": {
+      "path": "/ff-test"
+    }
+  },
+  "extensions": {
+    "checkout/transactions/flow-finance-payment": {
+      "component": "FlowFinanceModal"
+    },
+    "ff-test": {
+      "component": "FlowFinanceTest"
+    }
+  }
+}

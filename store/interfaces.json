@@ -1,0 +1,8 @@
+{
+  "store.custom#ff-test": {
+    "required": ["ff-test"]
+  },
+  "ff-test": {
+    "component": "FlowFinanceTest"
+  }
+}

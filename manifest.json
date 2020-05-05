@@ -1,0 +1,38 @@
+{
+  "name": "flow-finance-payment",
+  "vendor": "vtex",
+  "version": "0.0.1",
+  "title": "Flow Finance Payment",
+  "description": "An implentation of Flow Finance payment method",
+  "categories": [],
+  "registries": ["smartcheckout"],
+  "builders": {
+    "react": "2.x",
+    "pages": "0.x",
+    "docs": "0.x"
+  },
+  "mustUpdateAt": "2018-09-05",
+  "scripts": {
+    "postreleasy": "vtex publish --verbose"
+  },
+  "dependencies": {
+    "vtex.styleguide": "8.x"
+  },
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexpayments.com.br",
+        "path": "/*"
+      }
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}
