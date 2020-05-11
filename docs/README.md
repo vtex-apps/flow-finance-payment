@@ -51,6 +51,7 @@ function calculateInstallments(
 }
 
 function hideFlowFinanceOption() {
+  $('.payment-group-item:first').click()
   $('#payment-group-FlowFinancePaymentGroup').hide()
 }
 
@@ -138,6 +139,8 @@ async function initializeFlowFinance() {
   $('.flowFinancePaymentGroup').html(
     `<div class="pa3 center"><i class="icon-spinner icon-spin" /></div>`
   )
+  hideBuyNowButton()
+
   let email = ''
   let total = 0
   let credit = 0
@@ -170,11 +173,9 @@ async function initializeFlowFinance() {
           }
           if (status == 'none') {
             renderPromoMessageWithLinkToSignUpPage(total)
-            hideBuyNowButton()
           }
           if (status == 'pending') {
             renderMessageToCheckBackLater()
-            hideBuyNowButton()
           }
           if (status == 'approved') {
             if (credit < total) {
@@ -182,7 +183,6 @@ async function initializeFlowFinance() {
             } else if (loanOptions.length) {
               renderLoanOptions(loanOptions, credit)
             }
-            hideBuyNowButton()
           }
         })
       }
