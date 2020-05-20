@@ -62,6 +62,7 @@ class FlowFinanceModal extends Component<FlowFinanceAuthenticationProps> {
     return (
       <ModalDialog
         centered
+        closeOnOverlayClick={false}
         isOpen={this.state.modalOpen}
         title="Para continuar você precisa aceitar os termos do contrato de financiamento"
         confirmation={

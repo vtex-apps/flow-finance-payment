@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
+## [0.0.4] - 2020-05-20
+
+### Fixed
+
+- Prevent modal close when user clicks outside of modal
+
+### Changed
+
+- Documentation
+
 ## [0.0.3] - 2020-05-11
 
 ### Changed
